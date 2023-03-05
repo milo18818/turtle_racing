@@ -1,6 +1,12 @@
 from turtle import*
 from random import randint
 
+bt = 0
+rt = 0
+
+print ("place bet on turtel")
+bet = input()
+
 speed(99999999999)
 penup()
 goto(-140, 140)
@@ -35,8 +41,14 @@ blue.pendown()
 for turn in range(100):
     red.forward(randint(1, 5))
     blue.forward(randint(1, 5))
+    red_pos = red.xcor()
+    print("red pos" + str(red_pos))
+    blue_pos = blue.xcor()
+    print("blue pos" + str(blue_pos))
 
-
-
-
-
+if red_pos > blue_pos:
+    print("red win")
+elif blue_pos > red_pos:
+    print("blue win")
+else:
+    print("!DRAW!")
