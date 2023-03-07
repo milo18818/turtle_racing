@@ -55,9 +55,11 @@ for turn in range(100):
     green_pos = green.xcor()
     print("green pos" + str(green_pos))
 
-if red_pos > blue_pos:
+if red_pos > blue_pos and red_pos > green_pos:
     print("red win")
-elif blue_pos > red_pos:
+elif blue_pos > red_pos and blue_pos > green_pos:
     print("blue win")
+elif green_pos > blue_pos and green_pos > red_pos:
+    print("green win")
 else:
     print("!DRAW!")
